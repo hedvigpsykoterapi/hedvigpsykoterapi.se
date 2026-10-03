@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" fill="none">
+<defs><filter id="carved" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="0" dy="1.3" stdDeviation="0.7" flood-color="#100b08" flood-opacity="0.9"/></filter></defs>
+<g filter="url(#carved)" stroke="#65452f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 3H240M0 69H240M0 36C25 36 25 8 47 8C66 8 68 31 54 34C42 37 37 22 47 18M54 34C76 35 80 15 93 15M0 36C25 36 25 64 47 64C66 64 68 41 54 38C42 35 37 50 47 54M54 38C76 37 80 57 93 57"/>
+<g transform="translate(240 0) scale(-1 1)"><path d="M0 36C25 36 25 8 47 8C66 8 68 31 54 34C42 37 37 22 47 18M54 34C76 35 80 15 93 15M0 36C25 36 25 64 47 64C66 64 68 41 54 38C42 35 37 50 47 54M54 38C76 37 80 57 93 57"/></g>
+<g fill="#65452f" stroke="none"><path transform="rotate(0 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(45 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(90 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(135 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(180 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(225 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(270 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/><path transform="rotate(315 120 36)" d="M120 30C108 23 109 9 120 5C131 9 132 23 120 30Z"/>
+<path d="M23 20Q13 5 4 10Q5 23 23 20M24 52Q12 66 4 62Q5 49 24 52M76 26Q65 6 76 7Q88 13 76 26M76 46Q65 66 76 65Q88 59 76 46"/>
+<g transform="translate(240 0) scale(-1 1)"><path d="M23 20Q13 5 4 10Q5 23 23 20M24 52Q12 66 4 62Q5 49 24 52M76 26Q65 6 76 7Q88 13 76 26M76 46Q65 66 76 65Q88 59 76 46"/></g></g>
+<circle cx="120" cy="36" r="8"/><circle cx="120" cy="36" r="3" fill="#65452f"/>
+</g></svg>

@@ -88,7 +88,26 @@
       opacity: 0.18;
       pointer-events: none;
     }
-    #hero { min-height: 100svh; padding: clamp(15rem, 25vw, 22rem) 1.5rem 6rem; }
+    #hero { height: calc(100dvh + 2px); min-height: 100dvh; padding: clamp(12rem, 26dvh, 18rem) 1.5rem 10rem; }
+    #hero > .wood-divider { position: absolute; inset: auto 0 -1px; }
+    .hero-more {
+      position: absolute;
+      bottom: 92px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .hero-more svg { width: 22px; height: 22px; }
+    .hero-more:hover { color: var(--rose); }
+    .hero-more:focus-visible { outline: 2px solid var(--rose); outline-offset: 6px; }
     .hero-introduction { position: relative; max-width: 680px; }
     .hero-introduction h1 {
       font-family: 'Merriweather', serif;
@@ -108,7 +127,14 @@
 
     /* ─── SHARED SECTION ─────────────────────────── */
     section { padding: 8rem 2rem; scroll-margin-top: 5rem; }
-    #hero { border-bottom: 14px solid var(--chocolate); }
+    .wood-divider {
+      height: 76px;
+      background: #281b15 url('assets/wood-floral.svg') center / 220px 66px repeat-x;
+      box-shadow: inset 0 3px 6px #130c09, inset 0 -3px 6px #130c09;
+      border-block: 5px solid #21150f;
+    }
+    .wood-divider--slim { height: 54px; background-size: 160px 48px; border-width: 3px; }
+    .about-image { isolation: isolate; }
     .container { max-width: 1080px; margin: 0 auto; }
 
     .section-label {
@@ -163,6 +189,7 @@
       border: 1px solid var(--rose);
       z-index: -1;
     }
+    .about-image::after { border-color: var(--chocolate); border-right-width: 12px; border-bottom-width: 12px; }
     .about-text p + p { margin-top: 1.2rem; }
     .about-credentials {
       margin-top: 2.5rem;
@@ -280,12 +307,22 @@
       }
     }
 
+    @media (max-height: 740px) {
+      .nav-logo { width: min(32vw, 320px); }
+      #hero { padding-top: 10rem; padding-bottom: 9rem; }
+      .hero-introduction h1 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 1rem; }
+      .hero-introduction p { font-size: 1rem; line-height: 1.65; }
+    }
+    @media (max-height: 560px) {
+      #hero { height: auto; min-height: 100dvh; }
+    }
+
     /* ─── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 800px) {
       nav { padding: 1.2rem 1.5rem; }
       nav { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
       .nav-logo { width: min(100%, 420px); }
-      #hero { padding-top: 15rem; padding-bottom: 4rem; }
+      #hero { padding-top: 14rem; padding-bottom: 10rem; }
       #hero::before {
         background-image: linear-gradient(to bottom, var(--burgundy) 0%, transparent 45%, var(--burgundy) 100%), url('assets/coast-800.jpg');
         background-image: linear-gradient(to bottom, var(--burgundy) 0%, transparent 45%, var(--burgundy) 100%), image-set(url('assets/coast-800.avif') type('image/avif'), url('assets/coast-800.webp') type('image/webp'), url('assets/coast-800.jpg') type('image/jpeg'));
@@ -324,6 +361,11 @@
       <h1>Lorem ipsum dolor sit amet</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
+    <a class="hero-more" href="#om-mig">
+      Läs mer
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v16m-6-6 6 6 6-6" /></svg>
+    </a>
+    <div class="wood-divider" aria-hidden="true"></div>
   </section>
 
   <!-- OM MIG -->
@@ -392,6 +434,8 @@
       </div>
     </div>
   </section>
+
+  <div class="wood-divider wood-divider--slim" aria-hidden="true"></div>
 
   <!-- KONTAKT -->
   <section id="kontakt">
