@@ -6,28 +6,28 @@
   <title>Hedvig Psykoterapi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --forest:       #2c4a3e;
-      --forest-dark:  #1e342a;
-      --sage:         #8aab97;
-      --sage-pale:    #dce8e3;
+      --burgundy:       #742f40;
+      --burgundy-dark:  #542332;
+      --rose:         #e2b5a8;
+      --rose-pale:    #ead8d0;
       --warm-white:   #f7f2ea;
       --off-white:    #faf8f5;
-      --terracotta:   #b8654a;
-      --text-dark:    #1e2d27;
-      --text-mid:     #4a5e56;
+      --chocolate:   #503429;
+      --text-dark:    #352720;
+      --text-mid:     #665049;
       --text-light:   #f5f0e8;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
       background-color: var(--off-white);
       color: var(--text-dark);
       line-height: 1.75;
@@ -45,21 +45,15 @@
       transition: background 0.35s ease, box-shadow 0.35s ease;
     }
     nav.scrolled {
-      background: rgba(28, 44, 38, 0.97);
+      background: rgba(84, 35, 50, 0.97);
       box-shadow: 0 1px 0 rgba(255,255,255,0.06);
     }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      text-decoration: none;
-    }
+    .nav-logo { display: block; width: clamp(340px, 44vw, 560px); flex-shrink: 0; }
+    .nav-logo img { display: block; width: 100%; height: auto; }
+    .nav-logo:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--rose); outline-offset: 5px; }
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: clamp(1rem, 2.5vw, 2.5rem);
       list-style: none;
     }
     .nav-links a {
@@ -75,7 +69,7 @@
     /* ─── HERO ────────────────────────────────────── */
     #hero {
       min-height: 100vh;
-      background-color: var(--forest);
+      background-color: var(--burgundy);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -89,76 +83,14 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 65% 35%, rgba(138,171,151,0.13) 0%, transparent 68%);
+      background: radial-gradient(ellipse at 65% 35%, rgba(226,181,168,0.16) 0%, transparent 68%);
       pointer-events: none;
     }
-    .hero-eyebrow {
-      font-size: 0.68rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 1.75rem;
-    }
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3.2rem, 9vw, 7.5rem);
-      font-weight: 300;
-      line-height: 1.0;
-      color: var(--text-light);
-      letter-spacing: 0.02em;
-    }
-    .hero-title em {
-      font-style: italic;
-      color: var(--sage);
-    }
-    .hero-subtitle {
-      font-size: 0.78rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(245,240,232,0.5);
-      margin-top: 1.75rem;
-      margin-bottom: 3rem;
-    }
-    .hero-cta {
-      display: inline-block;
-      padding: 0.9rem 2.75rem;
-      border: 1px solid rgba(245,240,232,0.3);
-      color: var(--text-light);
-      font-family: 'Jost', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.25s, border-color 0.25s;
-    }
-    .hero-cta:hover {
-      background: rgba(245,240,232,0.1);
-      border-color: rgba(245,240,232,0.65);
-    }
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 2.75rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-      color: rgba(245,240,232,0.35);
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-    }
-    .hero-scroll-hint::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 3rem;
-      background: rgba(245,240,232,0.25);
-    }
+    #hero { min-height: 100svh; padding: 8rem 1.5rem 3rem; }
 
     /* ─── SHARED SECTION ─────────────────────────── */
-    section { padding: 8rem 2rem; }
+    section { padding: 8rem 2rem; scroll-margin-top: 5rem; }
+    #hero { border-bottom: 14px solid var(--chocolate); }
     .container { max-width: 1080px; margin: 0 auto; }
 
     .section-label {
@@ -166,23 +98,23 @@
       font-size: 0.62rem;
       letter-spacing: 0.32em;
       text-transform: uppercase;
-      color: var(--terracotta);
+      color: var(--chocolate);
       margin-bottom: 1.5rem;
     }
     h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.1rem, 5vw, 3.6rem);
-      font-weight: 300;
-      line-height: 1.1;
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.3;
       margin-bottom: 1.5rem;
-      color: var(--forest);
+      color: var(--burgundy);
     }
     h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Merriweather', serif;
       font-size: 1.7rem;
       font-weight: 400;
       margin-bottom: 0.85rem;
-      color: var(--forest);
+      color: var(--burgundy);
     }
     p {
       font-size: 0.97rem;
@@ -201,21 +133,21 @@
     }
     .about-image {
       aspect-ratio: 3/4;
-      background-color: var(--sage-pale);
+      background-color: var(--rose-pale);
       position: relative;
     }
     .about-image::after {
       content: '';
       position: absolute;
       top: 1.5rem; right: -1.5rem; bottom: -1.5rem; left: 1.5rem;
-      border: 1px solid var(--sage);
+      border: 1px solid var(--rose);
       z-index: -1;
     }
     .about-text p + p { margin-top: 1.2rem; }
     .about-credentials {
       margin-top: 2.5rem;
       padding-top: 2rem;
-      border-top: 1px solid var(--sage-pale);
+      border-top: 1px solid var(--rose-pale);
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -225,12 +157,12 @@
       letter-spacing: 0.06em;
       color: var(--text-mid);
       padding: 0.5rem 0;
-      border-bottom: 1px solid var(--sage-pale);
+      border-bottom: 1px solid var(--rose-pale);
     }
 
     /* ─── TJÄNSTER ───────────────────────────────── */
-    #tjanster { background: var(--forest); }
-    #tjanster .section-label { color: var(--sage); }
+    #tjanster { background: var(--burgundy); }
+    #tjanster .section-label { color: var(--rose); }
     #tjanster h2 { color: var(--text-light); }
 
     .services-grid {
@@ -247,10 +179,10 @@
     }
     .service-card:hover { background: rgba(255,255,255,0.09); }
     .service-number {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Merriweather', serif;
       font-size: 0.72rem;
       letter-spacing: 0.22em;
-      color: var(--sage);
+      color: var(--rose);
       display: block;
       margin-bottom: 1.75rem;
     }
@@ -275,8 +207,8 @@
     .info-block p + p { margin-top: 0.9rem; }
 
     /* ─── KONTAKT ────────────────────────────────── */
-    #kontakt { background: var(--forest-dark); padding-bottom: 0; }
-    #kontakt .section-label { color: var(--sage); }
+    #kontakt { background: var(--burgundy-dark); padding-bottom: 0; }
+    #kontakt .section-label { color: var(--rose); }
     #kontakt h2 { color: var(--text-light); }
 
     .contact-grid {
@@ -292,7 +224,7 @@
       max-width: none;
     }
     .contact-info a {
-      color: var(--sage);
+      color: var(--rose);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -307,7 +239,7 @@
 
     /* ─── FOOTER ─────────────────────────────────── */
     footer {
-      background: var(--forest-dark);
+      background: var(--burgundy-dark);
       border-top: 1px solid rgba(255,255,255,0.06);
       padding: 1.5rem 3rem;
       display: flex;
@@ -324,7 +256,10 @@
     /* ─── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 800px) {
       nav { padding: 1.2rem 1.5rem; }
-      .nav-links { display: none; }
+      nav { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
+      .nav-logo { width: min(100%, 420px); }
+      .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.5rem 1.25rem; max-width: 100%; }
+      .nav-links a { font-size: 0.65rem; letter-spacing: 0.08em; }
       section { padding: 5rem 1.5rem; }
       .about-grid,
       .services-grid,
@@ -339,7 +274,9 @@
 
   <!-- NAV -->
   <nav id="main-nav">
-    <a href="#hero" class="nav-logo">Hedvig Psykoterapi</a>
+    <a href="#hero" class="nav-logo" aria-label="Hedvig Psykoterapi – startsida">
+      <img src="Logo-transparent.svg" alt="Hedvig H Ekström Psykoterapi" />
+    </a>
     <ul class="nav-links">
       <li><a href="#om-mig">Om mig</a></li>
       <li><a href="#tjanster">Tjänster</a></li>
@@ -350,11 +287,7 @@
 
   <!-- HERO -->
   <section id="hero">
-    <span class="hero-eyebrow">Psykoterapi &amp; Psykodynamisk terapi</span>
-    <h1 class="hero-title">Hedvig<br /><em>Psykoterapi</em></h1>
-    <p class="hero-subtitle">Malmö &mdash; Legitimerad psykoterapeut</p>
-    <a href="#kontakt" class="hero-cta">Boka ett samtal</a>
-    <div class="hero-scroll-hint">Scrolla</div>
+    <!-- Central content to be added. -->
   </section>
 
   <!-- OM MIG -->
