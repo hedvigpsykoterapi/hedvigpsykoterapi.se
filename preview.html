@@ -35,7 +35,7 @@
 
     /* ─── NAV ─────────────────────────────────────── */
     nav {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
@@ -43,10 +43,6 @@
       justify-content: space-between;
       padding: 1.4rem 3rem;
       transition: background 0.35s ease, box-shadow 0.35s ease;
-    }
-    nav.scrolled {
-      background: rgba(84, 35, 50, 0.97);
-      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
     }
     .nav-logo { display: block; width: clamp(340px, 44vw, 560px); flex-shrink: 0; }
     .nav-logo img { display: block; width: 100%; height: auto; }
@@ -460,13 +456,6 @@
     <p>&copy; 2026 Hedvig Psykoterapi</p>
     <p>Legitimerad psykoterapeut &mdash; Malmö</p>
   </footer>
-
-  <script>
-    const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-  </script>
 
 </body>
 </html>
