@@ -84,11 +84,11 @@
       opacity: 0.18;
       pointer-events: none;
     }
-    #hero { height: calc(100dvh + 2px); min-height: 100dvh; padding: clamp(12rem, 26dvh, 18rem) 1.5rem 10rem; }
+    #hero { height: calc(100dvh + 2px); min-height: 100dvh; padding: clamp(12rem, 26dvh, 18rem) 1.5rem 13rem; }
     #hero > .wood-divider { position: absolute; inset: auto 0 -1px; }
     .hero-more {
       position: absolute;
-      bottom: 92px;
+      bottom: 140px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -124,12 +124,12 @@
     /* ─── SHARED SECTION ─────────────────────────── */
     section { padding: 8rem 2rem; scroll-margin-top: 5rem; }
     .wood-divider {
-      height: 76px;
-      background: #281b15 url('assets/wood-floral.svg') center / 220px 66px repeat-x;
-      box-shadow: inset 0 3px 6px #130c09, inset 0 -3px 6px #130c09;
-      border-block: 5px solid #21150f;
+      height: 124px;
+      background: #503429 url('assets/botanical-border.webp') center / auto 114px repeat-x;
+      box-shadow: none;
+      border-block: 5px solid #38251a;
     }
-    .wood-divider--slim { height: 54px; background-size: 160px 48px; border-width: 3px; }
+    .wood-divider--slim { height: 90px; background-size: auto 84px; border-width: 3px; }
     .about-image { isolation: isolate; }
     .container { max-width: 1080px; margin: 0 auto; }
 
@@ -305,7 +305,7 @@
 
     @media (max-height: 740px) {
       .nav-logo { width: min(32vw, 320px); }
-      #hero { padding-top: 10rem; padding-bottom: 9rem; }
+      #hero { padding-top: 10rem; padding-bottom: 12rem; }
       .hero-introduction h1 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 1rem; }
       .hero-introduction p { font-size: 1rem; line-height: 1.65; }
     }
@@ -318,7 +318,7 @@
       nav { padding: 1.2rem 1.5rem; }
       nav { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
       .nav-logo { width: min(100%, 420px); }
-      #hero { padding-top: 14rem; padding-bottom: 10rem; }
+      #hero { padding-top: 14rem; padding-bottom: 13rem; }
       #hero::before {
         background-image: linear-gradient(to bottom, var(--burgundy) 0%, transparent 45%, var(--burgundy) 100%), url('assets/coast-800.jpg');
         background-image: linear-gradient(to bottom, var(--burgundy) 0%, transparent 45%, var(--burgundy) 100%), image-set(url('assets/coast-800.avif') type('image/avif'), url('assets/coast-800.webp') type('image/webp'), url('assets/coast-800.jpg') type('image/jpeg'));
