@@ -271,14 +271,13 @@
     .info-block p + p { margin-top: 0.9rem; }
 
     .info-prices { grid-column: 1 / -1; }
-    .price-list { list-style: none; padding: 0; margin: 0.75rem 0 1.5rem; font-size: 1rem; }
-    .price-list li + li { margin-top: 0.4rem; }
 
     /* ─── KONTAKT ────────────────────────────────── */
     #kontakt { background: var(--burgundy-dark); padding-bottom: 0; }
     #kontakt .section-label { color: var(--rose); }
     #kontakt h2 { color: var(--text-light); }
 
+    .contact-introduction { color: rgba(245,240,232,0.65); max-width: 72ch; }
     .contact-location { margin-top: 2rem; max-width: 72ch; }
     .contact-location p { color: rgba(245,240,232,0.65); }
     .contact-location p + p { margin-top: 0.9rem; }
@@ -470,13 +469,9 @@
         </div>
         <div class="info-block info-prices">
           <h3>Priser</h3>
-          <p>Privat individualterapi: 1050 kr för 45 minuter.</p>
-          <p>För par eller familjer (75 minuter):</p>
-          <ul class="price-list">
-            <li>1 gång: 1550 kr</li>
-            <li>5 gånger: 7000 kr</li>
-            <li>10 gånger: 13000 kr</li>
-          </ul>
+          <p>Privat individualterapi: 1050 kr för 45 minuter.<br />
+          För par eller familjer: 1550 kr för 75 minuter.</p>
+          <p>Efter ett första besök finns rabatter i form av paketpris à 5 eller 10 gånger för par/familjer.</p>
           <p>Vid avbokning inom 48 timmar av bekräftat besök debiteras fullt belopp om vi inte kan ta det digitalt eller boka om besöket till en ny tid <em>inom</em> en vecka. Möjligheten till ombokning är begränsad.</p>
         </div>
       </div>
@@ -490,10 +485,7 @@
     <div class="container">
       <span class="section-label">Kontakt</span>
       <h2>Hör av dig</h2>
-      <div class="contact-location">
-        <p>Jag sitter i ett gammalt rött gatuhus på Stora Nygatan 40 i centrala Malmö med ingång från gården.</p>
-        <p>Det är nära till busshållplats på Studentgatan och Gustan Adolfstorg, tillgängligt med cykel och gångavstånd från Malmö C. Bilparkering finns på gatan men lite billigare en bit bort i Caroli P-hus.</p>
-      </div>
+      <p class="contact-introduction">Om du är intresserad av eller nyfiken på terapi är du välkommen att höra av dig. Du behöver inte skriva mycket, bara berätta att du vill ha kontakt och hur jag bäst når dig.</p>
       <div class="contact-grid">
         <div class="contact-info">
           <address>
@@ -501,6 +493,10 @@
             <a href="tel:+46708211228">0708-21&nbsp;12&nbsp;28</a>
           </address>
           <p class="contact-note">Kontakt sker snabbast via sms. Meddelanden via 1177 kan ta längre tid under helger och semesterperioder.</p>
+        </div>
+        <div class="contact-location">
+          <p>Jag sitter i ett gammalt rött gatuhus på Stora Nygatan 40 i centrala Malmö med ingång från gården.</p>
+          <p>Det är nära till busshållplats på Studentgatan och Gustan Adolfstorg, tillgängligt med cykel och gångavstånd från Malmö C. Bilparkering finns på gatan men lite billigare en bit bort i Caroli P-hus.</p>
         </div>
       </div>
     </div>
