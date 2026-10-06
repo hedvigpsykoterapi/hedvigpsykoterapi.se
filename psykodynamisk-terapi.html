@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hedvig Psykoterapi</title>
+  <title>Psykodynamisk terapi – Hedvig Psykoterapi</title>
+  <meta name="description" content="Om psykodynamisk terapi, känslor och relationsmönster, och Hedvigs relationella arbetssätt." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -209,32 +210,10 @@
 
     /* ─── TJÄNSTER ───────────────────────────────── */
     #tjanster { background: var(--burgundy); }
-    .services-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 240px;
-      gap: 4rem;
-      align-items: center;
-    }
-    .services-photo {
-      display: block;
-      border: 3px solid var(--chocolate);
-    }
-    .services-photo img { display: block; width: 100%; height: auto; }
     #tjanster .section-label { color: var(--rose); }
     #tjanster h2 { color: var(--text-light); }
-    .services-method {
-      color: var(--text-light);
-      max-width: 72ch;
-      font-size: clamp(1.2rem, 2vw, 1.4rem);
-    }
-    .services-method a {
-      color: var(--text-light);
-      font-weight: 500;
-      text-decoration: underline;
-      text-decoration-color: var(--rose);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.2em;
-    }
+    .services-method { color: var(--text-light); max-width: 72ch; }
+    .services-method a { color: var(--rose); text-underline-offset: 0.2em; }
     .services-method a:hover { color: var(--text-light); }
 
     .services-grid {
@@ -267,21 +246,13 @@
       margin-top: 4rem;
     }
     .info-block h3 { font-size: 1.35rem; margin-bottom: 0.9rem; }
-    .info-block p { font-size: 1rem; }
+    .info-block p { font-size: 0.92rem; }
     .info-block p + p { margin-top: 0.9rem; }
-
-    .info-prices { grid-column: 1 / -1; }
-    .price-list { list-style: none; padding: 0; margin: 0.75rem 0 1.5rem; font-size: 1rem; }
-    .price-list li + li { margin-top: 0.4rem; }
 
     /* ─── KONTAKT ────────────────────────────────── */
     #kontakt { background: var(--burgundy-dark); padding-bottom: 0; }
     #kontakt .section-label { color: var(--rose); }
     #kontakt h2 { color: var(--text-light); }
-
-    .contact-location { margin-top: 2rem; max-width: 72ch; }
-    .contact-location p { color: rgba(245,240,232,0.65); }
-    .contact-location p + p { margin-top: 0.9rem; }
 
     .contact-grid {
       margin-top: 4rem;
@@ -295,7 +266,6 @@
       line-height: 2;
       max-width: none;
     }
-    .contact-info address { font-size: clamp(1.25rem, 2.5vw, 1.65rem); line-height: 1.8; }
     .contact-info a {
       color: var(--rose);
       text-decoration: none;
@@ -348,8 +318,6 @@
       .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     }
     @media (max-width: 800px) {
-      .services-intro { grid-template-columns: 1fr; gap: 2rem; }
-      .services-photo { width: min(100%, 280px); }
       nav { padding: 1.2rem 1.5rem; }
       nav { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
       .nav-logo { width: min(100%, 420px); }
@@ -369,148 +337,53 @@
     .about-image::after { display: none; }
       footer { flex-direction: column; gap: 0.4rem; text-align: center; }
     }
+
+    .method-header { background: var(--burgundy); }
+    .method-header nav { position: relative; }
+    .method-header .nav-logo { width: clamp(220px, 30vw, 360px); }
+    .method-content { max-width: 780px; margin: auto; padding: 4rem 1.5rem 5rem; }
+    .method-content h1 { font-family: 'Merriweather', serif; font-weight: 400; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.3; color: var(--burgundy); margin: 1.5rem 0; }
+    .method-content h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin: 2.5rem 0 1rem; }
+    .method-content p { max-width: none; font-size: 1.05rem; }
+    .method-content p + p { margin-top: 1rem; }
+    .method-content a { color: var(--burgundy); text-underline-offset: .2em; }
+    .method-content .method-source { font-size: .85rem; margin-top: 3rem; }
   </style>
 </head>
 <body>
+  <header class="method-header">
+    <nav aria-label="Huvudnavigation">
+      <a href="preview.html#hero" class="nav-logo" aria-label="Hedvig Psykoterapi – startsida"><img src="Logo-transparent.svg" alt="Hedvig H Ekström Psykoterapi" /></a>
+      <ul class="nav-links">
+        <li><a href="preview.html#om-mig">Om mig</a></li>
+        <li><a href="preview.html#tjanster">Tjänster</a></li>
+        <li><a href="preview.html#praktisk-info">Praktisk info</a></li>
+        <li><a href="preview.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="method-content">
+    <a href="preview.html#tjanster">← Tillbaka till vad jag erbjuder</a>
+    <h1>Psykodynamisk terapi</h1>
+    <p>Psykodynamisk terapi, ofta förkortat PDT, är en samtalsterapi där vi utforskar känslor, tankar och relationer för att förstå det som är svårt i ditt liv. Målet är ökad självkännedom och möjlighet till förändring.</p>
 
-  <!-- NAV -->
-  <nav id="main-nav">
-    <a href="#hero" class="nav-logo" aria-label="Hedvig Psykoterapi – startsida">
-      <img src="Logo-transparent.svg" alt="Hedvig H Ekström Psykoterapi" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="#om-mig">Om mig</a></li>
-      <li><a href="#tjanster">Tjänster</a></li>
-      <li><a href="#praktisk-info">Praktisk info</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
+    <h2>Att förstå det som återkommer</h2>
+    <p>Ibland reagerar vi på sätt som vi själva har svårt att förstå. Tidigare erfarenheter kan påverka hur vi känner, vad vi förväntar oss av andra och hur vi möter situationer i nuet. I terapin kan vi undersöka dessa samband och bearbeta upplevelser som fortfarande berör oss.</p>
+    <p>Samtalen handlar både om det som händer här och nu och om erfarenheter som har format dig. Tillsammans kan vi uppmärksamma återkommande mönster och känslor eller behov som inte alltid är lätta att sätta ord på.</p>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-introduction">
-      <h1>Vill du gå i psykoterapi?</h1>
-      <p>Mår du inte bra? Upplever du ångest i vissa eller många situationer i livet, känner du dig nedstämd, håglös, deprimerad? Har du upplevt trauma eller andra svåra händelser du behöver bearbeta?</p>
-      <p>Eller känner du dig fast i livet, upplever ett skav någonstans, eller upprepar du samma mönster i relationer? Kämpar du med stress, sorg eller existentiella frågor?</p>
-      <p>Anledningarna till att gå i terapi är många. Välkommen att <a href="#kontakt">kontakta mig</a> om du vill testa eller bara vill veta mer.</p>
-    </div>
-    <a class="hero-more" href="#om-mig">
-      Läs mer
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v16m-6-6 6 6 6-6" /></svg>
-    </a>
-    <div class="wood-divider" aria-hidden="true"></div>
-  </section>
+    <h2>Mitt relationella arbetssätt</h2>
+    <p>Jag utgår från ett relationellt perspektiv. Det innebär att våra relationer och hur vi möter varandra får en viktig plats i samtalen. Tillsammans bygger vi en trygg relation vilandes på empati, nyfikenhet och respekt för din historia och livssituation.</p>
+    <p>Jag väver samman detta med ett fokus på den kroppsliga upplevelsen i stunden. Vi kan stanna upp vid hur en känsla upplevs i kroppen och utforska den tillsammans, med ett djupt lyssnande och i en takt som utgår från dina behov.</p>
 
-  <!-- OM MIG -->
-  <section id="om-mig">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <picture>
-            <source type="image/avif" srcset="assets/hedvig-portrait-420.avif 420w, assets/hedvig-portrait-840.avif 840w, assets/hedvig-portrait-1260.avif 1260w" sizes="(max-width: 800px) min(420px, calc(100vw - 48px)), (max-width: 1144px) calc((100vw - 144px) * 5 / 12), 417px" />
-            <source type="image/webp" srcset="assets/hedvig-portrait-420.webp 420w, assets/hedvig-portrait-840.webp 840w, assets/hedvig-portrait-1260.webp 1260w" sizes="(max-width: 800px) min(420px, calc(100vw - 48px)), (max-width: 1144px) calc((100vw - 144px) * 5 / 12), 417px" />
-            <img src="assets/hedvig-portrait-840.jpg" srcset="assets/hedvig-portrait-420.jpg 420w, assets/hedvig-portrait-840.jpg 840w, assets/hedvig-portrait-1260.jpg 1260w" sizes="(max-width: 800px) min(420px, calc(100vw - 48px)), (max-width: 1144px) calc((100vw - 144px) * 5 / 12), 417px" alt="Hedvig H Ekström" width="840" height="1120" loading="lazy" decoding="async" />
-          </picture>
-        </div>
-        <div class="about-text">
-          <h2>Om mig</h2>
-          <p>Jag är utbildad socionom och legitimerad psykoterapeut med lång erfarenhet av psykodynamisk terapi. Jag utgår från ett relationellt perspektiv och väver samman det med ett fokus på den kroppsliga upplevelsen i stunden. Mitt arbete utgår alltid från ett djupt lyssnande med en nyfiken och respektfull hållning till varje persons unika historia och livssituation.</p>
-          <p>Jag har arbetat länge med psykoterapi för vuxna både privat och inom vårdval psykoterapi. Innan dess arbetade jag inom psykiatri, skola och primärvård inklusive ungdomsmottagning, och jag har behandlat ett brett spektrum av tillstånd, däribland ångest, depression och relationsproblem, hos både vuxna och unga. Idag arbetar jag uteslutande i privat praktik med individualterapi för vuxna och unga, med föräldrar och par.</p>
-          <p>Jag erbjuder samtal på svenska och engelska.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <h2>Hur går terapin till?</h2>
+    <p>Samtalens innehåll växer fram i mötet mellan dig och terapeuten. Psykodynamisk terapi kan vara kortare eller längre; en kortare terapi kan ha ett mer avgränsat fokus.</p>
+    <p>Hos mig utformas terapin efter dina behov och önskemål. Arbetet bygger på regelbundenhet och en relation där vi tillsammans kan utforska dina känslor, reaktioner och mönster. Det är en process som får ta tid.</p>
 
-  <!-- TJÄNSTER -->
-  <section id="tjanster">
-    <div class="container">
-      <div class="services-intro">
-        <div>
-          <span class="section-label">Tjänster</span>
-          <h2>Vad jag erbjuder</h2>
-          <p class="services-method">Mitt arbete utgår från psykodynamisk terapi, <a href="psykodynamisk-terapi.html">läs mer här</a>.</p>
-        </div>
-        <picture class="services-photo">
-          <source type="image/avif" srcset="assets/beach-footprints-clean-240.avif 240w, assets/beach-footprints-clean-280.avif 280w, assets/beach-footprints-clean-480.avif 480w, assets/beach-footprints-clean-560.avif 560w, assets/beach-footprints-clean-840.avif 840w" sizes="(max-width: 800px) 280px, 240px" />
-          <source type="image/webp" srcset="assets/beach-footprints-clean-240.webp 240w, assets/beach-footprints-clean-280.webp 280w, assets/beach-footprints-clean-480.webp 480w, assets/beach-footprints-clean-560.webp 560w, assets/beach-footprints-clean-840.webp 840w" sizes="(max-width: 800px) 280px, 240px" />
-          <img src="assets/beach-footprints-clean-480.jpg" srcset="assets/beach-footprints-clean-240.jpg 240w, assets/beach-footprints-clean-280.jpg 280w, assets/beach-footprints-clean-480.jpg 480w, assets/beach-footprints-clean-560.jpg 560w, assets/beach-footprints-clean-840.jpg 840w" sizes="(max-width: 800px) 280px, 240px" alt="Fotspår i sanden på en strand" width="1086" height="1448" loading="lazy" decoding="async" />
-        </picture>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Individualterapi</h3>
-          <p>Individualterapi är för dig som behöver bearbeta händelser och relationer i ditt liv, söker djupare förståelse för dig själv, behöver komma ur destruktiva relationsmönster, önskar känna mer livsglädje eller minska ångesten i vardagen eller upplever annat som skaver, hindrar och sårar dig. Tillsammans bygger vi en trygg relation vilandes på empati och förståelse där vi tillsammans kan utforska dina känslor, reaktioner och mönster. Utifrån det kan vi processa känslor, förstå dina behov, hitta läkning och förändra dina mönster. Psykoterapin utgår från dina behov och önskemål och utformas efter det du behöver. Terapi är en process som tar tid, bygger på regelbundenhet och att du vågar försöka.</p>
-        </div>
-        <div class="service-card">
-          <h3>Parterapi</h3>
-          <p>För par som är i kris, har hamnat i stiltje i relationen, har svårt för att kommunicera och svårt att förstå varandra. Terapin bygger på att etablera en trygghet, där ni kan höra varandra och känna er hörda, och där era känslor kan utforskas för att vi ska förstå mer om de mönster ni har utvecklat och vilka behov ni har underliggande. Vi arbetar tillsammans för att hitta nya sätt att möta varandra på, så att relationen kan stärkas och fördjupas och intimiteten kan växa.</p>
-        </div>
-        <div class="service-card">
-          <h3>Familjestöd</h3>
-          <p>Stöd till föräldrar, Bonusfamiljer och till unga är för de familjer som har svårt att nå varandra, som fastnar i negativitet och där relationen knyter sig. Det är för er som vill hitta nya sätt att förstå, prata med och bemöta varandra. Tillsammans bygger vi ett tryggt rum där vi kan utforska de mönster som uppstått, förstå hur ni hamnat där och vad som behöver ändras för att er relation och kommunikation ska bli bättre.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRAKTISK INFO -->
-  <section id="praktisk-info">
-    <div class="container">
-      <span class="section-label">Praktisk information</span>
-      <div class="info-grid">
-        <div class="info-block">
-          <h3>Vårdval psykoterapi</h3>
-          <p>Jag har avtal med Region Skåne. Med remiss från din vårdcentral kan du använda högkostnadsskyddet och erhålla upp till 16 samtal plus ett uppföljningssamtal.</p>
-          <p>Remiss kan utfärdas för lätt till medelsvår depression, ångest och stressrelaterade tillstånd. Kontakta mig innan remiss skickas för frågor om tidsbokning och väntetid.</p>
-        </div>
-        <div class="info-block">
-          <h3>Privat terapi</h3>
-          <p>Du kan komma till mig utan remiss och betala privat. Det går bra att komma för enstaka besök, några besök eller regelbundna besök. Du kan komma själv, tillsammans med partner eller andra familjemedlemmar såsom med-förälder, ungdom, förälder. Du betalar via swish eller med faktura.</p>
-        </div>
-        <div class="info-block info-prices">
-          <h3>Priser</h3>
-          <p>Privat individualterapi: 1050 kr för 45 minuter.</p>
-          <p>För par eller familjer (75 minuter):</p>
-          <ul class="price-list">
-            <li>1 gång: 1550 kr</li>
-            <li>5 gånger: 7000 kr</li>
-            <li>10 gånger: 13000 kr</li>
-          </ul>
-          <p>Vid avbokning inom 48 timmar av bekräftat besök debiteras fullt belopp om vi inte kan ta det digitalt eller boka om besöket till en ny tid <em>inom</em> en vecka. Möjligheten till ombokning är begränsad.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+    <h2>Vill du veta mer?</h2>
+    <p>Du behöver inte veta exakt vad du behöver hjälp med för att ta kontakt. <a href="preview.html#kontakt">Välkommen att höra av dig</a> om du vill veta mer eller undersöka om terapi hos mig kan vara ett nästa steg.</p>
+    <p class="method-source">Mer allmän information om terapiformen finns hos <a href="https://www.1177.se/Stockholm/liv--halsa/psykisk-halsa/att-soka-stod-och-hjalp/psykoterapi-och-psykologisk-behandling/">1177: Psykoterapi och psykologisk behandling</a>.</p>
+  </main>
   <div class="wood-divider wood-divider--slim" aria-hidden="true"></div>
-
-  <!-- KONTAKT -->
-  <section id="kontakt">
-    <div class="container">
-      <span class="section-label">Kontakt</span>
-      <h2>Hör av dig</h2>
-      <div class="contact-location">
-        <p>Jag sitter i ett gammalt rött gatuhus på Stora Nygatan 40 i centrala Malmö med ingång från gården.</p>
-        <p>Det är nära till busshållplats på Studentgatan och Gustan Adolfstorg, tillgängligt med cykel och gångavstånd från Malmö C. Bilparkering finns på gatan men lite billigare en bit bort i Caroli P-hus.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <address>
-            <a href="mailto:hedvig@hedvigpsykoterapi.se">hedvig@hedvigpsykoterapi.se</a><br />
-            <a href="tel:+46708211228">0708-21&nbsp;12&nbsp;28</a>
-          </address>
-          <p class="contact-note">Kontakt sker snabbast via sms. Meddelanden via 1177 kan ta längre tid under helger och semesterperioder.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Hedvig Psykoterapi</p>
-    <p>Legitimerad psykoterapeut &mdash; Malmö</p>
-  </footer>
-
+  <footer><p>&copy; 2026 Hedvig Psykoterapi</p><p>Legitimerad psykoterapeut &mdash; Malmö</p></footer>
 </body>
 </html>
