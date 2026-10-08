@@ -348,13 +348,25 @@
     .method-content p + p { margin-top: 1rem; }
     .method-content a { color: var(--burgundy); text-underline-offset: .2em; }
     .method-content .method-source { font-size: .85rem; margin-top: 3rem; }
+
+    .nav-toggle { display: none; }
+    @media (max-width: 800px) {
+      nav { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 1rem; }
+      nav .nav-logo { width: min(68%, 320px); }
+      .nav-toggle { display: block; min-height: 44px; padding: .5rem .8rem; border: 1px solid var(--rose); border-radius: 3px; background: transparent; color: var(--text-light); font: inherit; cursor: pointer; }
+      .nav-toggle:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+      nav .nav-links { display: none; flex-basis: 100%; flex-direction: column; gap: 0; padding: .5rem 1rem; background: var(--burgundy-dark); border: 1px solid rgba(255,255,255,.15); }
+      nav .nav-links.is-open { display: flex; }
+      nav .nav-links a { display: block; padding: .8rem .25rem; font-size: .9rem; letter-spacing: .1em; }
+    }
   </style>
 </head>
 <body>
   <header class="method-header">
     <nav aria-label="Huvudnavigation">
       <a href="preview.html#hero" class="nav-logo" aria-label="Hedvig Psykoterapi – startsida"><img src="Logo-transparent.svg" alt="Hedvig H Ekström Psykoterapi" /></a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Meny</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="preview.html#om-mig">Om mig</a></li>
         <li><a href="preview.html#tjanster">Tjänster</a></li>
         <li><a href="preview.html#praktisk-info">Praktisk info</a></li>
@@ -387,5 +399,25 @@
   </main>
   <div class="wood-divider wood-divider--slim" aria-hidden="true"></div>
   <footer><p>&copy; 2026 Hedvig Psykoterapi</p><p>Legitimerad psykoterapeut &mdash; Malmö</p></footer>
+  <script>
+    const menuButton = document.querySelector('.nav-toggle');
+    const menuLinks = document.querySelector('#nav-links');
+    function setMenu(open) {
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.textContent = open ? 'Stäng' : 'Meny';
+      menuLinks.classList.toggle('is-open', open);
+    }
+    menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+    menuLinks.addEventListener('click', event => {
+      if (event.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
+    matchMedia('(max-width: 800px)').addEventListener('change', () => setMenu(false));
+  </script>
 </body>
 </html>
