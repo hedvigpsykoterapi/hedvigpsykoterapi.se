@@ -284,6 +284,7 @@
     .contact-location p + p { margin-top: 0.9rem; }
 
     .contact-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; margin-top: 4rem; padding-bottom: 8rem; }
+    .contact-room img { display: block; width: 100%; height: auto; }
     .contact-room { display: block; width: 100%; height: auto; border-radius: 2px; }
     .contact-info address,
     .contact-info p {
@@ -503,7 +504,11 @@
           <p>Det är nära till busshållplats på Studentgatan och Gustan Adolfstorg, tillgängligt med cykel och gångavstånd från Malmö C. Bilparkering finns på gatan men lite billigare en bit bort i Caroli P-hus.</p>
         </div>
       </div>
-      <img class="contact-room" src="rummet.jpg" alt="Terapirummet hos Hedvig Psykoterapi" loading="lazy" decoding="async" />
+      <picture class="contact-room">
+        <source type="image/avif" srcset="assets/room-480.avif 480w, assets/room-800.avif 800w, assets/room-1200.avif 1200w, assets/room-1600.avif 1600w" sizes="(max-width: 800px) calc(100vw - 48px), (max-width: 1144px) calc((100vw - 112px) / 2.2), 455px" />
+        <source type="image/webp" srcset="assets/room-480.webp 480w, assets/room-800.webp 800w, assets/room-1200.webp 1200w, assets/room-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 48px), (max-width: 1144px) calc((100vw - 112px) / 2.2), 455px" />
+        <img src="assets/room-800.jpg" srcset="assets/room-480.jpg 480w, assets/room-800.jpg 800w, assets/room-1200.jpg 1200w, assets/room-1600.jpg 1600w" sizes="(max-width: 800px) calc(100vw - 48px), (max-width: 1144px) calc((100vw - 112px) / 2.2), 455px" alt="Terapirummet hos Hedvig Psykoterapi" width="800" height="600" loading="lazy" decoding="async" />
+      </picture>
       </div>
     </div>
   </section>

@@ -7,11 +7,20 @@ root = Path(__file__).resolve().parents[1]
 assets = root / 'assets'
 assets.mkdir(exist_ok=True)
 
+import argparse
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--only", help="Regenerate only the named image asset")
+args = parser.parse_args()
+
 for name, original, widths in [
+    ('room', 'rummet.jpg', (480, 800, 1200, 1600)),
     ('hedvig-portrait', 'Hedvig bild hemsida.jpg', (420, 840, 1260)),
     ('coast', 'IMG_0548.JPG', (800, 1600, 2400)),
     ('beach-footprints-clean', 'assets/beach-footprints-clean.png', (240, 280, 480, 560, 840)),
 ]:
+    if args.only and name != args.only:
+        continue
     image = ImageOps.exif_transpose(Image.open(root / original)).convert('RGB')
     if name == 'coast':
         image = image.crop((0, 250, 3450, 2700))
