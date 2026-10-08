@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 for name, original, widths in [
     ('room', 'rummet.jpg', (480, 800, 1200, 1600)),
-    ('hedvig-portrait', 'Hedvig bild hemsida.jpg', (420, 840, 1260)),
+    ('hedvig-portrait', 'Hedvig bild hemsida.jpg', (420, 840)),
     ('coast', 'IMG_0548.JPG', (800, 1600, 2400)),
     ('beach-footprints-clean', 'assets/beach-footprints-clean.png', (240, 280, 480, 560, 840)),
 ]:
