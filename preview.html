@@ -121,7 +121,7 @@
       margin-inline: auto;
     }
     .hero-introduction p + p { margin-top: 0.55rem; }
-    .hero-introduction p:last-child { max-width: 62ch; }
+    .hero-introduction p:last-child { max-width: 74ch; }
     .hero-introduction a { color: inherit; text-underline-offset: 0.2em; }
     .hero-introduction a:hover { color: var(--rose); }
 
@@ -271,7 +271,8 @@
     .info-block p { font-size: 1rem; }
     .info-block p + p { margin-top: 0.9rem; }
 
-    .info-prices { grid-column: 1 / -1; }
+    .info-prices { grid-column: 1; grid-row: 2; }
+    .info-digital { grid-column: 2; grid-row: 2; }
 
     /* ─── KONTAKT ────────────────────────────────── */
     #kontakt { background: var(--burgundy-dark); padding-bottom: 0; }
@@ -367,6 +368,7 @@
       .about-grid,
       .services-grid,
       .info-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .info-prices, .info-digital { grid-column: auto; grid-row: auto; }
       .about-image { aspect-ratio: 3/4; max-width: 420px; width: 100%; margin-inline: auto; }
       .about-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
     .about-image::after { display: none; }
@@ -485,7 +487,7 @@
           <h3>Privat terapi</h3>
           <p>Du kan komma till mig utan remiss och betala privat. Det går bra att komma för enstaka besök, några besök eller regelbundna besök. Du kan komma själv, tillsammans med partner eller andra familjemedlemmar såsom med-förälder, ungdom, förälder. Du betalar via swish eller med faktura.</p>
         </div>
-        <div class="info-block">
+        <div class="info-block info-digital">
           <h3>Digitala möten</h3>
           <p>Digitala möten sker vid behov via en låst videolänk. Jag rekommenderar inte att hela terapier eller ens största delen av terapin görs digitalt, men ibland är det viktigt för att kunna få ihop livet, som vid semester, sjukdom, vård av barn, krockande åtaganden eller annat.</p>
         </div>
@@ -520,7 +522,7 @@
           <p class="contact-note">Kontakt sker snabbast via sms.</p>
         </div>
         <div class="contact-location">
-          <p>Jag sitter i ett gammalt rött gatuhus på Stora Nygatan 40 i centrala Malmö med ingång från gården.</p>
+          <p>Jag sitter i ett gammalt rött gatuhus på Stora Nygatan i centrala Malmö med ingång från gården.</p>
           <p>Det är nära till busshållplats på Studentgatan och Gustan Adolfstorg, tillgängligt med cykel och gångavstånd från Malmö C. Bilparkering finns på gatan men lite billigare en bit bort i Caroli P-hus.</p>
         </div>
       </div>
