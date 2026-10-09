@@ -14,6 +14,7 @@ parser.add_argument("--only", help="Regenerate only the named image asset")
 args = parser.parse_args()
 
 for name, original, widths in [
+    ('blocked-road', 'blockerad väg.jpg', (360, 720, 1080)),
     ('lake-sun', 'sjöisol.jpg', (480, 800, 1200)),
     ('room', 'rummet.jpg', (480, 800, 1200, 1600)),
     ('hedvig-portrait', 'Hedvig bild hemsida.jpg', (420, 840)),

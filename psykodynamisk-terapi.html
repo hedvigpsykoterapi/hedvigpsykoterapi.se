@@ -350,6 +350,14 @@
     .method-lake { display: block; margin-top: 3rem; }
     .method-lake img { display: block; width: 100%; height: auto; }
     .meeting-divider { border: 0; border-top: 3px solid var(--chocolate); margin: 3rem 0; }
+    .first-meeting-grid { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 2rem; align-items: start; }
+    .first-meeting-grid h2 { margin-top: 0; }
+    .first-meeting-photo { display: block; margin-top: .4rem; }
+    .first-meeting-photo img { display: block; width: 100%; height: auto; }
+    @media (max-width: 800px) {
+      .first-meeting-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .first-meeting-photo { width: min(60%, 260px); margin: 0 auto; }
+    }
     #forsta-motet { scroll-margin-top: 2rem; }
     .method-content .method-source { font-size: .85rem; margin-top: 3rem; }
 
@@ -410,6 +418,13 @@
     <p>Psykodynamisk terapi kan vara kortare eller längre. Arbetet bygger på regelbundenhet och en relation där vi tillsammans kan utforska dina känslor, reaktioner och mönster. Det är en process som får ta tid och för en fördjupad förståelse och förändring i terapi behövs regelbunden kontakt under längre tid. Men en kortare terapi kan vara verksam för ett mer avgränsat fokus. För att upprätthålla förändringar kan man ses mer sällan, som varannan vecka eller varje månad. Vi utformar terapin efter dina behov och önskemål.</p>
 
     <hr class="meeting-divider" />
+    <div class="first-meeting-grid">
+      <picture class="first-meeting-photo">
+        <source type="image/avif" srcset="assets/blocked-road-360.avif 360w, assets/blocked-road-720.avif 720w, assets/blocked-road-1080.avif 1080w" sizes="(max-width: 800px) min(260px, calc((100vw - 48px) * .6)), 260px" />
+        <source type="image/webp" srcset="assets/blocked-road-360.webp 360w, assets/blocked-road-720.webp 720w, assets/blocked-road-1080.webp 1080w" sizes="(max-width: 800px) min(260px, calc((100vw - 48px) * .6)), 260px" />
+        <img src="assets/blocked-road-720.jpg" srcset="assets/blocked-road-360.jpg 360w, assets/blocked-road-720.jpg 720w, assets/blocked-road-1080.jpg 1080w" sizes="(max-width: 800px) min(260px, calc((100vw - 48px) * .6)), 260px" width="720" height="1600" alt="En blockerad väg" loading="lazy" decoding="async" />
+      </picture>
+      <div>
     <h2 id="forsta-motet">Det första mötet</h2>
 
     <p>Det första mötet går till så att du får berätta vad det är som får dig att söka hjälp, hur du mår idag, och hur din situation ser ut. Du behöver själv inte ge några förklaringar eller förstå varför, utan bara berätta. Vi kommer senare att gå in på din historia. Under första mötet har du också möjlighet att ställa frågor om terapin och kan känna efter om samarbetet känns rätt.</p>
@@ -419,6 +434,9 @@
     <p>Jag kommer under första eller andra mötet ha frågor om din livssituation med boende, jobb, studier, relationer, och om livsvanor kring mat, motion, alkohol och droger, mediciner. Detta är både för att visa att allt är välkommet att prata om här men också för att sånt kan spela roll för hur du mår eller säga något om dig som vi kan titta på tillsammans. Det finns inga pekpinnar i terapin.</p>
 
     <p>Jag arbetar under tystnadsplikt.</p>
+
+      </div>
+    </div>
 
     <h2>Vill du veta mer?</h2>
     <p>Du behöver inte veta exakt vad du behöver hjälp med för att ta kontakt. <a href="preview.html#kontakt">Välkommen att höra av dig</a> om du vill veta mer eller undersöka om terapi hos mig kan vara ett nästa steg.</p>
