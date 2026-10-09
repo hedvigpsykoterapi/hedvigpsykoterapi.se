@@ -278,14 +278,16 @@
     #kontakt .section-label { color: var(--rose); }
     #kontakt h2 { color: var(--text-light); }
 
-    .contact-introduction { color: rgba(245,240,232,0.65); max-width: 72ch; }
+    .contact-introduction { color: rgba(245,240,232,0.65); max-width: none; }
+    .contact-first-meeting { margin-top: 1rem; max-width: none; }
+    .contact-first-meeting a { color: var(--rose); text-underline-offset: .2em; }
     .contact-location { margin-top: 2rem; max-width: 72ch; }
     .contact-location p { color: rgba(245,240,232,0.65); }
     .contact-location p + p { margin-top: 0.9rem; }
 
     .contact-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; margin-top: 4rem; padding-bottom: 8rem; }
     .contact-room img { display: block; width: 100%; height: auto; }
-    .contact-room { display: block; width: 100%; height: auto; border-radius: 2px; }
+    .contact-room { margin-top: 2rem; display: block; width: 100%; height: auto; border-radius: 2px; }
     .contact-info address,
     .contact-info p {
       font-style: normal;
@@ -360,6 +362,7 @@
       .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.5rem 1.25rem; max-width: 100%; }
       .nav-links a { font-size: 0.65rem; letter-spacing: 0.08em; }
       section { padding: 5rem 1.5rem; }
+      .contact-room { margin-top: 0; }
       .contact-layout { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 5rem; }
       .about-grid,
       .services-grid,
@@ -402,10 +405,7 @@
   <section id="hero">
     <div class="hero-introduction">
       <h1>Välkommen till psykoterapi</h1>
-      <p>Mår du inte bra? Upplever du ångest ibland eller ofta, känner du dig nedstämd, håglös, deprimerad? Har du upplevt trauma eller andra svåra händelser du behöver bearbeta?</p>
-      <p>Eller känner du dig fast i livet, upplever ett skav någonstans? Upprepar du samma jobbiga mönster i relationer? Kämpar du med stress, sorg eller existentiella frågor?</p>
-      <p>Eller längtar du efter utveckling, att förstå dig själv djupare, gå vidare i livet?</p>
-      <p>Anledningarna till att gå i terapi är många. Oavsett var du befinner dig i ditt liv är du välkommen att <a href="#kontakt">kontakta mig</a> om du vill testa eller bara vill veta mer.</p>
+      <p>Anledningarna till att gå i terapi är många. Oavsett var du befinner dig i ditt liv och om du kämpar med stark ångest, depression, traumatiska upplevelser eller bara känner att det finns ett skav, en missnöjdhet, att du är fast i gamla mönster, så är du välkommen att <a href="#kontakt">kontakta mig</a> om du vill testa eller bara vill veta mer.</p>
     </div>
     <a class="hero-more" href="#om-mig">
       Läs mer
@@ -427,11 +427,13 @@
         </div>
         <div class="about-text">
           <h2>Om mig</h2>
-          <p>Jag är utbildad socionom och legitimerad psykoterapeut med lång erfarenhet av psykodynamisk terapi inom primärvård, i arbete med ungdomar och i privat regi med vuxna och par. Jag har behandlat ett brett spektrum av tillstånd, däribland ångest, depression och relationsproblem, hos både vuxna och unga. Min psykoterapeututbildning gjorde jag utomlands och medan den vilar på psykodynamisk grund var den integrativt fokuserad där kognitiva, somatiska och existentiella och transpersonella frågor och arbetssätt vävdes samman med det psykodynamiska. I många år har jag fördjupat mig i anknytning. <a href="psykodynamisk-terapi.html">Läs mer om psykoterapi här</a>.</p>
-          <p>I mitt liv har jag bott på många olika platser, arbetat med människor i många olika situationer och mött människor från alla platser i livet. Jag har själv gått i psykoterapi i många år. Jag har sett hur vi alla har något som är svårt, något som vi inte visar för andra, något som vi vill dölja. Jag vet hur det kan begränsa oss men också hur svårt det kan vara att närma sig det på egen hand. Jag har också sett hur vi alla har styrkor vi inte anar och förmågor att acceptera och ta oss an våra utmaningar när vi får hjälp med det.</p>
-          <p>Som psykoterapeut utgår jag från ett relationellt perspektiv och väver samman det med ett fokus både på den emotionella och den kroppsliga upplevelsen i stunden. Mitt arbete utgår alltid från ett djupt lyssnande med en nyfiken och respektfull hållning till varje persons unika historia och livssituation. Jag vill skapa ett tryggt rum för dig att närma dig det som är svårt, gömt sen länge, eller gör ont. Jag vill möta dig där du är, för att förhoppningsvis kunna stötta dig på din resa till ett mer integrerat jag.</p>
-          <p>Idag arbetar jag uteslutande i privat praktik med individualterapi för vuxna och unga, med föräldrar och par. Jag är legitimerad av Socialstyrelsen och lyder därmed under Hälso- och Sjukvårdslagen.</p>
+          <p>Jag är legitimerad psykoterapeut och socionom med lång erfarenhet av att möta vuxna, unga och par i livets olika skeden. Till mig kan du söka för ett brett spektrum av utmaningar, såsom ångest, depression, relationsproblem eller när livet känns svårt att hantera på egen hand.</p>
+          <p>Som psykoterapeut utgår jag från en psykodynamisk och relationell grund och väver samman det med den emotionella och kroppsliga upplevelsen i stunden. Jag har en mångårig fördjupning inom anknytningsteori.</p>
+          <p>Efter att ha levt och arbetat på många olika platser, samt gått i lång egenpsykoterapi, har jag en djup förståelse för att vi alla bär på dolda eller svåra saker – men också på oanade inre styrkor.</p>
+          <p>Mitt arbete utgår alltid från ett djupt lyssnande med en nyfiken och respektfull hållning till varje persons unika historia och livssituation. Jag vill skapa ett tryggt rum för dig att närma dig det som är svårt, gömt sen länge, eller gör ont.</p>
+          <p>Jag är legitimerad av Socialstyrelsen och lyder därmed under Hälso- och Sjukvårdslagen.</p>
           <p>Jag erbjuder samtal på svenska och engelska.</p>
+          <p><a href="psykodynamisk-terapi.html">Läs mer om psykoterapi här</a>.</p>
         </div>
       </div>
     </div>
@@ -454,15 +456,15 @@
       <div class="services-grid">
         <div class="service-card">
           <h3>Individualterapi</h3>
-          <p>Individualterapi är för dig som behöver bearbeta händelser och relationer i ditt liv, söker djupare förståelse för dig själv, behöver komma ur destruktiva relationsmönster, önskar känna mer livsglädje eller minska ångesten i vardagen eller upplever annat som skaver, hindrar och sårar dig. Tillsammans bygger vi en trygg relation vilandes på empati och förståelse där vi tillsammans kan utforska dina känslor, reaktioner och mönster. Utifrån det kan vi processa känslor, förstå dina behov, hitta läkning och förändra dina mönster. Psykoterapin vilar på psykodynamisk grund och utgår från dina behov och önskemål och utformas efter det du behöver. Terapi är en process som tar tid, bygger på regelbundenhet och mod.</p>
+          <p>Individualterapi är för dig som behöver bearbeta händelser och relationer i ditt liv, söker djupare förståelse för dig själv, behöver komma ur destruktiva relationsmönster, önskar känna mer livsglädje eller minska ångesten i vardagen eller upplever annat som skaver, hindrar och sårar dig. Här skapar vi en trygg relation vilandes på empati och förståelse där vi tillsammans kan utforska dina känslor, reaktioner och mönster. Utifrån det kan vi processa känslor, förstå dina behov, och hitta en väg framåt. Psykoterapin vilar på psykodynamisk grund och integrerar andra perspektiv och verktyg, och utformas efter det du behöver. Terapi är en process som tar tid, bygger på regelbundenhet och mod.</p>
         </div>
         <div class="service-card">
           <h3>Parterapi</h3>
-          <p>För par som är i kris, har hamnat i stiltje i relationen, har svårt för att kommunicera och svårt att förstå varandra. Terapin bygger på att etablera en trygghet, där ni kan höra varandra och känna er hörda, och där era känslor kan utforskas för att vi ska förstå mer om de mönster ni har utvecklat och vilka behov ni har underliggande. Terapin vilar på psykodynamisk grund och utgår från EFT metoden, som hjälper oss att tillsammans hitta nya sätt för er att mötas på och förstå varandra så att relationen kan stärkas och fördjupas och intimiteten växa.</p>
+          <p>För par som är i kris, har hamnat i stiltje i relationen, har svårt för att kommunicera och svårt att förstå varandra och tappat intimiteten. Terapin bygger på att etablera en trygghet, där ni kan höra varandra och känna er hörda, och där era känslor kan utforskas för att vi ska förstå mer om de mönster ni har utvecklat och vilka behov ni har underliggande. Terapin vilar på psykodynamisk grund och utgår från EFT-metoden, med målet att hitta nya sätt för er att mötas på och förstå varandra så att relationen kan stärkas och fördjupas och intimiteten växa.</p>
         </div>
         <div class="service-card">
           <h3>Familjestöd</h3>
-          <p>Stöd till föräldrar, Bonusfamiljer och Stöd till unga är för de familjer som har svårt att nå varandra, som fastnar i negativitet och där relationen knyter sig. Det är för er som vill hitta nya sätt att förstå, prata med och bemöta varandra. Tillsammans bygger vi ett tryggt rum där vi kan utforska de mönster som uppstått, förstå hur ni hamnat där och vad som behöver ändras för att er relation och kommunikation ska bli bättre.</p>
+          <p>Familjestöd (Stöd till föräldrar, Bonusfamiljer och Stöd till unga) är för de familjer som har svårt att nå varandra, som fastnar i negativitet och där relationen knyter sig, oavsett hur er familj ser ut. Det är för er som vill hitta nya sätt att förstå, prata med och bemöta varandra. Tillsammans bygger vi ett tryggt rum där vi kan utforska de mönster som uppstått, förstå hur ni hamnat där och vad som behöver ändras för att er relation och kommunikation ska bli bättre.</p>
         </div>
       </div>
     </div>
@@ -477,10 +479,15 @@
           <h3>Vårdval psykoterapi</h3>
           <p>Jag har avtal med Region Skåne. Med remiss från din vårdcentral kan du använda högkostnadsskyddet och erhålla upp till 16 samtal plus ett uppföljningssamtal.</p>
           <p>Remiss kan utfärdas för lätt till medelsvår depression, ångest och stressrelaterade tillstånd. Kontakta mig innan remiss skickas för frågor om tidsbokning och väntetid.</p>
+          <p>Jag tar emot remisser från den 1 december 2026.</p>
         </div>
         <div class="info-block">
           <h3>Privat terapi</h3>
           <p>Du kan komma till mig utan remiss och betala privat. Det går bra att komma för enstaka besök, några besök eller regelbundna besök. Du kan komma själv, tillsammans med partner eller andra familjemedlemmar såsom med-förälder, ungdom, förälder. Du betalar via swish eller med faktura.</p>
+        </div>
+        <div class="info-block">
+          <h3>Digitala möten</h3>
+          <p>Digitala möten sker vid behov via en låst videolänk. Jag rekommenderar inte att hela terapier eller ens största delen av terapin görs digitalt, men ibland är det viktigt för att kunna få ihop livet, som vid semester, sjukdom, vård av barn, krockande åtaganden eller annat.</p>
         </div>
         <div class="info-block info-prices">
           <h3>Priser</h3>
@@ -501,6 +508,7 @@
       <span class="section-label">Kontakt</span>
       <h2>Hör av dig</h2>
       <p class="contact-introduction">Om du är intresserad av eller nyfiken på terapi är du välkommen att höra av dig. Du behöver inte ha en klar bild om vad problemet är och du behöver inte skriva mycket, bara berätta att du vill ha kontakt och hur jag bäst når dig.</p>
+      <p class="contact-first-meeting"><a href="psykodynamisk-terapi.html#forsta-motet">Läs mer om hur första mötet går till</a>.</p>
       <div class="contact-layout">
       <div class="contact-grid">
         <div class="contact-info">
