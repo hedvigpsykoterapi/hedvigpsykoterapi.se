@@ -23,10 +23,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Prepare public site
+        run: |
+          mkdir -p _site/assets
+          cp index.html preview.html psykodynamisk-terapi.html CNAME robots.txt sitemap.xml Logo-transparent.svg _site/
+          cp assets/coast-*.{avif,webp,jpg} assets/hedvig-portrait-{420,840}.{avif,webp,jpg} _site/assets/
+          cp assets/beach-footprints-clean-{240,280,480,560,840}.{avif,webp,jpg} _site/assets/
+          cp assets/room-*.{avif,webp,jpg} assets/lake-sun-*.{avif,webp,jpg} assets/blocked-road-*.{avif,webp,jpg} _site/assets/
+          cp assets/botanical-border-continuous.svg assets/favicon.svg assets/share.jpg _site/assets/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
